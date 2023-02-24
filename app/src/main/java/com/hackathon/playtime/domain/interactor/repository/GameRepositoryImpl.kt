@@ -1,6 +1,7 @@
 package com.hackathon.playtime.domain.interactor.repository
 
 import com.hackathon.playtime.data.datasource.api.GameApi
+import com.hackathon.playtime.data.datasource.remote.GameDetailsResponse
 import com.hackathon.playtime.data.datasource.remote.GameResponse
 import com.hackathon.playtime.data.repository.GameRepository
 import com.hackathon.playtime.utils.OrderByEnum
@@ -14,12 +15,16 @@ class GameRepositoryImpl(private val gameApi: GameApi) : GameRepository {
         private const val DEFAULT_PAGE_SIZE = 25
     }
 
-    override suspend fun getGames(filters: Map<String, String>, page: Int, pageSize: Int, order: OrderByEnum?) = withContext(Dispatchers.IO) {
+    override suspend fun getGames(
+        genreFilter: String,
+        platformFilter: String,
+        storeFilter: String,
+        ratingFilter: String,
+        page: Int,
+        pageSize: Int,
+        order: OrderByEnum?
+    ) = withContext(Dispatchers.IO) {
         try {
-            val genreFilter = filters.getOrDefault("genre", "")
-            val platformFilter = filters.getOrDefault("platform", "")
-            val storeFilter = filters.getOrDefault("store", "")
-            val ratingFilter = filters.getOrDefault("rating", "")
             val gamesResponse = gameApi.getGames(
                 genreFilter,
                 platformFilter,
@@ -35,7 +40,7 @@ class GameRepositoryImpl(private val gameApi: GameApi) : GameRepository {
         }
     }
 
-    override suspend fun getGameDetails(id: Int): GameResponse {
+    override suspend fun getGameDetails(id: Int): GameDetailsResponse {
         TODO("Not yet implemented")
     }
 
