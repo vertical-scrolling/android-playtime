@@ -1,3 +1,7 @@
 <resources>
+    <string name="profile_image">Profile\'s image</string>
+
     <string name="app_name">PlayTime</string>
+    <string name="search_label">Search</string>
+    <string name="search_hint">Search…</string>
 </resources>

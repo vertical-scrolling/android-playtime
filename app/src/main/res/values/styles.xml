@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+
+    <style name="poppins">
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <!-- 3XS -->
+
+    <style name="poppins_3xs" parent="poppins">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineHeight" >12sp</item>
+    </style>
+
+    <style name="poppins_3xs.light" parent="poppins_3xs">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_3xs.regular" parent="poppins_3xs">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_3xs.medium" parent="poppins_3xs">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_3xs.semibold" parent="poppins_3xs">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_3xs.bold" parent="poppins_3xs">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- 2XS -->
+
+    <style name="poppins_2xs" parent="poppins">
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineHeight" >13sp</item>
+    </style>
+
+    <style name="poppins_2xs.light" parent="poppins_2xs">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_2xs.regular" parent="poppins_2xs">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_2xs.medium" parent="poppins_2xs">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_2xs.semibold" parent="poppins_2xs">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_2xs.bold" parent="poppins_2xs">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- XS -->
+
+    <style name="poppins_xs" parent="poppins">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineHeight" >14sp</item>
+    </style>
+
+    <style name="poppins_xs.light" parent="poppins_xs">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_xs.regular" parent="poppins_xs">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_xs.medium" parent="poppins_xs">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_xs.semibold" parent="poppins_xs">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_xs.bold" parent="poppins_xs">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- S -->
+
+    <style name="poppins_s" parent="poppins">
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineHeight" >15sp</item>
+    </style>
+
+    <style name="poppins_s.light" parent="poppins_s">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_s.regular" parent="poppins_s">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_s.medium" parent="poppins_s">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_s.semibold" parent="poppins_s">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_s.bold" parent="poppins_s">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- M -->
+
+    <style name="poppins_m" parent="poppins">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight" >16sp</item>
+    </style>
+
+    <style name="poppins_m.light" parent="poppins_m">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_m.regular" parent="poppins_m">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_m.medium" parent="poppins_m">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_m.semibold" parent="poppins_m">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_m.bold" parent="poppins_m">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- L -->
+
+    <style name="poppins_l" parent="poppins">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineHeight" >18sp</item>
+    </style>
+
+    <style name="poppins_l.light" parent="poppins_l">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_l.regular" parent="poppins_l">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_l.medium" parent="poppins_l">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_l.semibold" parent="poppins_l">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_l.bold" parent="poppins_l">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- XL -->
+
+    <style name="poppins_xl" parent="poppins">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight" >19sp</item>
+    </style>
+
+    <style name="poppins_xl.light" parent="poppins_xl">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_xl.regular" parent="poppins_xl">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_xl.medium" parent="poppins_xl">
+        <item name="android:fontFamily" >@font/poppins_medium</item>
+    </style>
+
+    <style name="poppins_xl.semibold" parent="poppins_xl">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_xl.bold" parent="poppins_xl">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- 2XL -->
+
+    <style name="poppins_2xl" parent="poppins">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineHeight" >21sp</item>
+    </style>
+
+    <style name="poppins_2xl.semibold" parent="poppins_2xl">
+        <item name="android:fontFamily" >@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_2xl.bold" parent="poppins_2xl">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- 3XL -->
+
+    <style name="poppins_3xl" parent="poppins">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineHeight" >23sp</item>
+    </style>
+
+    <style name="poppins_3xl.bold" parent="poppins_3xl">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- 4XL -->
+
+    <style name="poppins_4xl" parent="poppins">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineHeight" >28sp</item>
+    </style>
+
+    <style name="poppins_4xl.light" parent="poppins_4xl">
+        <item name="android:fontFamily" >@font/poppins_light</item>
+    </style>
+
+    <style name="poppins_4xl.regular" parent="poppins_4xl">
+        <item name="android:fontFamily" >@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_4xl.bold" parent="poppins_4xl">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+    <!-- 5XL -->
+
+    <style name="poppins_5xl" parent="poppins">
+        <item name="android:textSize">50sp</item>
+        <item name="android:lineHeight" >50sp</item>
+    </style>
+
+    <style name="poppins_5xl.bold" parent="poppins_5xl">
+        <item name="android:fontFamily" >@font/poppins_bold</item>
+    </style>
+
+</resources>

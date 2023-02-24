@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.PlayTime" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/green_main_dark</item>
+        <item name="colorPrimaryVariant">@color/green_shine_dark</item>
+        <item name="colorOnPrimary">@color/green_shadow_dark</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/black_main_dark</item>
+        <item name="colorSecondaryVariant">@color/black_shine_dark</item>
+        <item name="colorOnSecondary">@color/black_shadow_dark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

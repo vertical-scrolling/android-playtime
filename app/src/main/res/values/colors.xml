@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!--General colors-->
+
+    <color name="black">#1A1A1A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--Light colors-->
+
+    <color name="green_main_light">#3EFF08</color>
+    <color name="green_shine_light">#99FF6E</color>
+    <color name="green_shadow_light">#61F203</color>
+    <color name="white_main_light">#EEF2EB</color>
+    <color name="white_shine_light">#FFFFFF</color>
+    <color name="white_shadow_light">#E5E5E5</color>
+    <color name="black_main_light">#161616</color>
+    <color name="black_shine_light">#3D3D3D</color>
+    <color name="black_shadow_light">#000000</color>
+
+    <color name="red_alert_light">#FF3B30</color>
+    <color name="orange_light">#FF9500</color>
+    <color name="yellow_light">#FFCC00</color>
+    <color name="green_light">#34C759</color>
+    <color name="blue_light">#007AFF</color>
+
+    <color name="gray_light">#8E938E</color>
+    <color name="gray_light_2">#AEB2AE</color>
+    <color name="gray_light_3">#C7CCC7</color>
+    <color name="gray_light_4">#D1D6D1</color>
+    <color name="gray_light_5">#E5EAE5</color>
+    <color name="gray_light_6">#F2F7F2</color>
+    <color name="gray_light_7">#F2F2F2</color>
+    <color name="linear_light_start">#F2F2F2</color>
+    <color name="linear_light_end">#F1F6F1</color>
+
+    <!--Dark colors-->
+
+    <color name="green_main_dark">#3EFF08</color>
+    <color name="green_shine_dark">#99FF6E</color>
+    <color name="green_shadow_dark">#61F203</color>
+    <color name="white_main_dark">#EEF2EB</color>
+    <color name="white_shine_dark">#FFFFFF</color>
+    <color name="white_shadow_dark">#E5E5E5</color>
+    <color name="black_main_dark">#2E2D2D</color>
+    <color name="black_shine_dark">#494949</color>
+    <color name="black_shadow_dark">#000000</color>
+
+    <color name="red_alert_dark">#FF453A</color>
+    <color name="orange_dark">#FF9F0A</color>
+    <color name="yellow_dark">#FFD60A</color>
+    <color name="green_dark">#30D158</color>
+    <color name="blue_dark">#0A84FF</color>
+
+    <color name="gray_dark">#8E938E</color>
+    <color name="gray_dark_2">#636663</color>
+    <color name="gray_dark_3">#484A48</color>
+    <color name="gray_dark_4">#3A3C3A</color>
+    <color name="gray_dark_5">#2C2C2C</color>
+    <color name="gray_dark_6">#1C1E1C</color>
+    <color name="gray_dark_7">#1C1C1C</color>
+    <color name="linear_dark_start">#1C1C1C</color>
+    <color name="linear_dark_end">#262B26</color>
+
 </resources>
