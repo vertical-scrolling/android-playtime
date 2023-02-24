@@ -1,4 +1,4 @@
-package com.hackathon.playtime.ui.main
+package com.hackathon.playtime.ui.view
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,24 +7,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hackathon.playtime.R
+import com.hackathon.playtime.ui.viewmodel.GamesListViewModel
 
-class MainFragment : Fragment() {
+class GamesListFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = GamesListFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: GamesListViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(GamesListViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.games_fragment, container, false)
     }
 
 }
