@@ -2,30 +2,33 @@ package com.hackathon.playtime.ui.view
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.hackathon.playtime.BaseFragment
 import com.hackathon.playtime.R
+import com.hackathon.playtime.databinding.GamesListFragmentBinding
 import com.hackathon.playtime.ui.viewmodel.GamesListViewModel
+import com.hackathon.playtime.utils.viewBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class GamesListFragment : Fragment() {
+class GamesListFragment() : BaseFragment(R.layout.games_list_fragment) {
 
-    companion object {
-        fun newInstance() = GamesListFragment()
-    }
+    private val binding by viewBinding(GamesListFragmentBinding::bind)
 
-    private lateinit var viewModel: GamesListViewModel
+    private val viewModel by viewModel<GamesListViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(GamesListViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        viewModel.setUp()
+        //TODO set observers
+
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.games_fragment, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //TODO set adapter
     }
 
 }
