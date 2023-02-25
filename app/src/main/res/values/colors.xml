@@ -2,6 +2,7 @@
 <resources>
 
     <!--General colors-->
+    <color name="green_app">#51B469</color>
 
     <color name="black">#1A1A1A</color>
     <color name="white">#FFFFFF</color>

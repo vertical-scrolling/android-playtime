@@ -2,12 +2,50 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/gamesListFragment">
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hackathon.playtime.ui.view.SplashFragment"
+        android:label="SplashFragment">
+
+        <action
+            android:id="@+id/action_splashFragment_to_gamesListFragment"
+            app:destination="@id/gamesListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@+id/navigation_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/gamesListFragment"
         android:name="com.hackathon.playtime.ui.view.GamesListFragment"
         android:label="GamesListFragment">
+        <deepLink
+            android:autoVerify="true"
+            app:uri="android-app://GamesListFragment" />
+
+        <action
+            android:id="@+id/action_gamesListFragment_to_gameDetailsFragment"
+            app:destination="@id/gamesDetailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@+id/navigation_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
+    <fragment
+        android:id="@+id/gamesDetailsFragment"
+        android:name="com.hackathon.playtime.ui.view.GameDetailsFragment"
+        android:label="GameDetailsFragment">
+
+        <argument
+            android:name="gameId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

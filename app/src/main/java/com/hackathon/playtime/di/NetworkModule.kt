@@ -5,19 +5,24 @@ import com.hackathon.playtime.data.datasource.api.GameApi
 import com.hackathon.playtime.data.datasource.api.GenreApi
 import com.hackathon.playtime.data.datasource.api.PlatformApi
 import com.hackathon.playtime.data.datasource.api.StoreApi
+import com.hackathon.playtime.domain.model.Store
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 val networkModule = module {
     factory { provideOkHttpClient() }
-    factory { provideGameApi(get()) }
-    factory { provideGenreApi(get()) }
-    factory { provideStoreApi(get()) }
-    factory { providePlatformApi(get()) }
-    single { provideRetrofit(get()) }
+    single(named("client")) { provideRetrofit(get()) }
+}
+
+val apiModule = module {
+    single { get<Retrofit>(named("client")).create(GameApi::class.java) }
+    single { get<Retrofit>(named("client")).create(StoreApi::class.java) }
+    single { get<Retrofit>(named("client")).create(PlatformApi::class.java) }
+    single { get<Retrofit>(named("client")).create(GenreApi::class.java) }
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
@@ -37,8 +42,3 @@ fun provideOkHttpClient() = OkHttpClient.Builder().apply {
         })
     }
 }.build()
-
-fun provideGameApi(retrofit: Retrofit): GameApi = retrofit.create(GameApi::class.java)
-fun provideStoreApi(retrofit: Retrofit): StoreApi = retrofit.create(StoreApi::class.java)
-fun providePlatformApi(retrofit: Retrofit): PlatformApi = retrofit.create(PlatformApi::class.java)
-fun provideGenreApi(retrofit: Retrofit): GenreApi = retrofit.create(GenreApi::class.java)

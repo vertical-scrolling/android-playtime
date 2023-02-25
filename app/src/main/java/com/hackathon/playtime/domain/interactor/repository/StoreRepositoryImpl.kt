@@ -19,7 +19,7 @@ class StoreRepositoryImpl(private val storeApi: StoreApi) : StoreRepository {
         withContext(Dispatchers.IO) {
             try {
                 val storesResponse = storeApi.getStores(DEFAULT_PAGE, DEFAULT_PAGE_SIZE, DEFAULT_ORDER)
-                storesResponse.body() ?: emptyList()
+                storesResponse.body()?.stores ?: emptyList()
             } catch (e: Exception) {
                 Log.e("StoreRepo", "getStores error: $e")
                 emptyList()

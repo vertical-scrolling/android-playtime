@@ -5,10 +5,10 @@ import com.hackathon.playtime.domain.model.Platform
 import com.hackathon.playtime.domain.model.toEntity
 
 interface GetPlatformsUseCase {
-    suspend fun getPlatforms(): List<Platform>
+    suspend operator fun invoke(): List<Platform>
 }
 
 class GetPlatformUseCaseImpl(private val platformRepository: PlatformRepository) : GetPlatformsUseCase {
-    override suspend fun getPlatforms() =
+    override suspend operator fun invoke() =
         platformRepository.getPlatforms().map { platformResponse -> platformResponse.toEntity() }
 }

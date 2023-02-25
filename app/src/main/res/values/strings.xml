@@ -4,4 +4,16 @@
     <string name="app_name">PlayTime</string>
     <string name="search_label">Search</string>
     <string name="search_hint">Search…</string>
+
+    <string name="games_list_title">Games</string>
+
+    <string name="game_details_title">Game Details</string>
+    <string name="game_details_rating">Rating</string>
+    <string name="game_details_date">Date</string>
+    <string name="game_details_playtime">Playtime\:</string>
+    <string name="game_details_status">Status</string>
+    <string name="game_details_platform">Platform</string>
+    <string name="game_details_synopsis">Description</string>
+
+    <string name="zero_hours">0h</string>
 </resources>

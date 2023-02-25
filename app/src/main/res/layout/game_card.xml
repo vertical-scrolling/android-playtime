@@ -4,68 +4,79 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewItem"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="153dp"
         android:layout_height="265dp"
-        card_view:cardElevation="0dp"
-        app:cardBackgroundColor="@color/transparent">
+        android:layout_marginBottom="24dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewItem"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="223dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardElevation="0dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/gameImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/hogwarts"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/no_image"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/gameCardTextView"
-                style="@style/poppins_m.medium"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/card_text_image_margin"
-                android:ellipsize="end"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gameImageView"
-                tools:text="Hogwarts Legacy" />
+        <TextView
+            android:id="@+id/gameCardTextView"
+            style="@style/poppins_m.medium"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="7dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewItem"
+            tools:text="Hogwarts Legacy" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ratingIconView"
-                android:layout_width="0dp"
-                android:layout_height="12dp"
-                android:layout_marginTop="@dimen/card_text_image_margin"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gameCardTextView"
-                tools:src="@drawable/ic_rating_green"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ratingIconView"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="@dimen/card_text_image_margin"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gameCardTextView"
+            tools:src="@drawable/ic_rating_green" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/ratingNumberView"
-                style="@style/poppins_2xs.regular"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                app:layout_constraintStart_toEndOf="@id/ratingIconView"
-                app:layout_constraintTop_toTopOf="@id/ratingIconView"
-                tools:text="88" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ratingNumberView"
+            style="@style/poppins_2xs.regular"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/ratingIconView"
+            app:layout_constraintTop_toTopOf="@id/ratingIconView"
+            tools:text="88" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/yearTextView"
-                style="@style/poppins_3xs.light"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/ratingIconView"
-                tools:text="2017" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/yearTextView"
+            style="@style/poppins_3xs.light"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ratingIconView"
+            tools:text="2017" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 </layout>

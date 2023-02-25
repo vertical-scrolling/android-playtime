@@ -19,7 +19,7 @@ class GenreRepositoryImpl(private val genreApi: GenreApi) : GenreRepository {
         withContext(Dispatchers.IO) {
             try{
                 val genresResponse = genreApi.getGenres(DEFAULT_PAGE, DEFAULT_PAGE_SIZE, DEFAULT_ORDER)
-                genresResponse.body() ?: emptyList()
+                genresResponse.body()?.genres ?: emptyList()
             } catch (e: Exception) {
                 Log.e("GenreRepo", "getGenres error: $e")
                 emptyList()

@@ -5,10 +5,10 @@ import com.hackathon.playtime.domain.model.Store
 import com.hackathon.playtime.domain.model.toEntity
 
 interface GetStoresUseCase {
-    suspend fun getStores(): List<Store>
+    suspend operator fun invoke(): List<Store>
 }
 
 class GetStoresUseCaseImpl(private val storeRepository: StoreRepository) : GetStoresUseCase {
-    override suspend fun getStores() =
+    override suspend operator fun invoke() =
         storeRepository.getStores().map { storeResponse -> storeResponse.toEntity() }
 }

@@ -1,6 +1,6 @@
 package com.hackathon.playtime.data.datasource.api
 
-import com.hackathon.playtime.data.datasource.remote.StoreResponse
+import com.hackathon.playtime.data.datasource.remote.StoreObjectResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,5 +12,5 @@ interface StoreApi {
         @Query("page") page: Int,
         @Query("pageSize") pageSize: Int,
         @Query("order") order: String
-    ): Response<List<StoreResponse>>
+    ): Response<StoreObjectResponse>
 }

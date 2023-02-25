@@ -19,7 +19,7 @@ class PlatformRepositoryImpl(private val platformApi: PlatformApi) : PlatformRep
         withContext(Dispatchers.IO) {
             try {
                 val platformsResponse = platformApi.getPlatforms(DEFAULT_PAGE, DEFAULT_PAGE_SIZE, DEFAULT_ORDER)
-                platformsResponse.body() ?: emptyList()
+                platformsResponse.body()?.platforms ?: emptyList()
             } catch (e: Exception) {
                 Log.e("PlatformRepo", "getPlatforms error: $e")
                 emptyList()

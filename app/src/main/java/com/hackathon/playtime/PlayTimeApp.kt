@@ -1,6 +1,7 @@
 package com.hackathon.playtime
 
 import android.app.Application
+import com.hackathon.playtime.di.apiModule
 import com.hackathon.playtime.di.networkModule
 import com.hackathon.playtime.domain.interactor.repositoriesModule
 import com.hackathon.playtime.domain.interactor.useCasesModule
@@ -20,6 +21,7 @@ class PlayTimeApp : Application() {
             modules(
                 listOf(
                     networkModule,
+                    apiModule,
                     viewModelsModule,
                     useCasesModule,
                     repositoriesModule

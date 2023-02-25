@@ -5,12 +5,13 @@
     android:id="@+id/mainConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_tetris"
     tools:context=".ui.view.GamesListFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/searchBarConstraintLayout"
         android:layout_width="0dp"
-        android:layout_height="34dp"
+        android:layout_height="24dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="18dp"
@@ -20,26 +21,27 @@
 
         <ImageView
             android:id="@+id/profileImageView"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher"/>
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageView
             android:id="@+id/searchIcon"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginStart="35dp"
+            android:contentDescription="profile image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/profileImageView"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_search"
-            android:contentDescription="profile image" />
+            app:srcCompat="@drawable/ic_search" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/searchFieldInput"
+            style="@style/poppins_s.light"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -52,31 +54,38 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/searchButton"
+            style="@style/poppins_m.regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/search_label"
+            android:textColor="@color/green_app"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rowCount="2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
 
-    </GridLayout-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gamesTitle"
+        style="@style/poppins_m.medium"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/games_list_title"
+        app:layout_constraintStart_toStartOf="@+id/searchBarConstraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/searchBarConstraintLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardViewRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="clip_vertical"
+        android:layout_marginTop="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchBarConstraintLayout"/>
+        app:layout_constraintEnd_toEndOf="@+id/searchBarConstraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/gamesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/gamesTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

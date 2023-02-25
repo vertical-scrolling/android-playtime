@@ -5,10 +5,10 @@ import com.hackathon.playtime.domain.model.Genre
 import com.hackathon.playtime.domain.model.toEntity
 
 interface GetGenresUseCase {
-    suspend fun getGenres(): List<Genre>
+    suspend operator fun invoke(): List<Genre>
 }
 
 class GetGenresUseCaseImpl(private val genreRepository: GenreRepository) : GetGenresUseCase {
-    override suspend fun getGenres() =
+    override suspend operator fun invoke() =
         genreRepository.getGenres().map { genreResponse -> genreResponse.toEntity() }
 }

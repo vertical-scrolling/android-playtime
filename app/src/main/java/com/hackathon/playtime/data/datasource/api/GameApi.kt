@@ -1,5 +1,7 @@
 package com.hackathon.playtime.data.datasource.api
 
+import com.hackathon.playtime.data.datasource.remote.GameDetailsResponse
+import com.hackathon.playtime.data.datasource.remote.GameObjectResponse
 import com.hackathon.playtime.data.datasource.remote.GameResponse
 import com.hackathon.playtime.utils.OrderByEnum
 import retrofit2.Response
@@ -18,8 +20,8 @@ interface GameApi {
         @Query("page") page: Int?,
         @Query("pageSize") pageSize: Int?,
         @Query("order") order: OrderByEnum?
-    ): Response<List<GameResponse>>
+    ): Response<GameObjectResponse>
 
     @GET("/1/games/{gameId}")
-    suspend fun getGameDetails(@Path("gameId") gameId: Int): Response<GameResponse>
+    suspend fun getGameDetails(@Path("gameId") gameId: String): Response<GameDetailsResponse>
 }

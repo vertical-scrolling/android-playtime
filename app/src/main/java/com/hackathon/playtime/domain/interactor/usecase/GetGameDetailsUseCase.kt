@@ -6,13 +6,13 @@ import com.hackathon.playtime.domain.model.toEntity
 
 interface GetGameDetailsUseCase {
 
-    suspend fun invoke(gameId: Int): GameDetails
+    suspend operator fun invoke(gameId: String): GameDetails
 }
 
 
 class GetGameDetailsUseCaseImpl(private val gameRepository: GameRepository): GetGameDetailsUseCase {
 
-        override suspend fun invoke(gameId: Int): GameDetails {
+        override suspend operator fun invoke(gameId: String): GameDetails {
             return gameRepository.getGameDetails(gameId).toEntity()
         }
 }

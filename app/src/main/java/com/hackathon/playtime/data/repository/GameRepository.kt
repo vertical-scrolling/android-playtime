@@ -16,6 +16,6 @@ interface GameRepository {
         order: OrderByEnum?
     ): List<GameResponse>
 
-    suspend fun getGameDetails(id: Int): GameDetailsResponse
+    suspend fun getGameDetails(id: String): GameDetailsResponse
 
 }
