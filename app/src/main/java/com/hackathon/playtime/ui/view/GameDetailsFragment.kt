@@ -1,8 +1,11 @@
 package com.hackathon.playtime.ui.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -60,6 +63,11 @@ class GameDetailsFragment : BaseFragment(R.layout.game_details_fragment) {
 
         binding.backButton.setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        binding.poweredByText.setOnClickListener {
+            val url = "https://rawg.io"
+            startActivity(Intent(Intent.ACTION_VIEW).apply { data = Uri.parse(url) })
         }
 
         viewModel.setUp(args.gameId)

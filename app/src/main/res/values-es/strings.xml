@@ -16,4 +16,5 @@
     <string name="game_details_synopsis">Descripción</string>
 
     <string name="zero_hours">0h</string>
+    <string name="powered_by">Datos proporcionados by RAWG</string>
 </resources>

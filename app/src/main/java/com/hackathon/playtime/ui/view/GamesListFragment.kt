@@ -1,5 +1,7 @@
 package com.hackathon.playtime.ui.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -91,6 +93,11 @@ class GamesListFragment : BaseFragment(R.layout.games_list_fragment) {
         }
 
         viewModel.setUp()
+
+        binding.poweredByText.setOnClickListener {
+            val url = "https://rawg.io"
+            startActivity(Intent(Intent.ACTION_VIEW).apply { data = Uri.parse(url) })
+        }
     }
 
     private fun goToGameDetails(gameId: Int) {

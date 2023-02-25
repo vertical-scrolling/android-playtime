@@ -50,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="18dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +91,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gameDetailsBodyCL"
                 android:layout_width="0dp"
-                android:layout_height="367dp"
+                android:layout_height="312dp"
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="27dp"
                 android:layout_marginEnd="17dp"
@@ -126,8 +127,8 @@
                         android:layout_width="0dp"
                         android:layout_height="22dp"
                         android:gravity="left"
-                        android:textColor="@color/white"
                         android:text="@string/game_details_rating"
+                        android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/gameDetailsRatingDateCL" />
 
@@ -150,8 +151,8 @@
                         android:layout_width="24dp"
                         android:layout_height="19dp"
                         android:layout_marginStart="7dp"
-                        android:layout_marginBottom="10.5dp"
                         android:layout_marginTop="10.5dp"
+                        android:layout_marginBottom="10.5dp"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/guideline1"
@@ -166,8 +167,8 @@
                         android:layout_width="0dp"
                         android:layout_height="22dp"
                         android:gravity="left"
-                        android:textColor="@color/white"
                         android:text="@string/game_details_date"
+                        android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="@id/guideline2"
                         app:layout_constraintTop_toTopOf="@+id/gameDetailsRatingDateCL" />
 
@@ -177,8 +178,8 @@
                         android:layout_width="0dp"
                         android:layout_height="22dp"
                         android:gravity="left"
-                        android:textColor="@color/white"
                         android:text="2017"
+                        android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="@id/guideline2"
                         app:layout_constraintTop_toBottomOf="@+id/dateTitle" />
 
@@ -199,8 +200,8 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="left"
-                        android:textColor="@color/white"
                         android:text="@string/game_details_playtime"
+                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -212,10 +213,10 @@
                         android:layout_height="20dp"
                         android:gravity="left"
                         android:textColor="@color/white"
-                        tools:text="34h"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/playtimeTitle"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="34h" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -235,8 +236,8 @@
                         android:layout_width="0dp"
                         android:layout_height="22dp"
                         android:gravity="left"
-                        android:textColor="@color/white"
                         android:text="@string/game_details_status"
+                        android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -244,8 +245,8 @@
                         android:id="@+id/status_badges"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/status"
                         android:scaleType="fitStart"
+                        android:src="@drawable/status"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/statusTitle" />
@@ -329,9 +330,25 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <TextView
+        android:id="@+id/poweredByText"
+        style="@style/poppins_3xs.light"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/powered_by"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameDetailsScrollView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
