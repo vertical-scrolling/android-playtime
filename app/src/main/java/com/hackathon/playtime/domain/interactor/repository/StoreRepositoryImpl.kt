@@ -1,5 +1,6 @@
 package com.hackathon.playtime.domain.interactor.repository
 
+import android.util.Log
 import com.hackathon.playtime.data.datasource.api.StoreApi
 import com.hackathon.playtime.data.datasource.remote.StoreResponse
 import com.hackathon.playtime.data.repository.StoreRepository
@@ -20,6 +21,7 @@ class StoreRepositoryImpl(private val storeApi: StoreApi) : StoreRepository {
                 val storesResponse = storeApi.getStores(DEFAULT_PAGE, DEFAULT_PAGE_SIZE, DEFAULT_ORDER)
                 storesResponse.body() ?: emptyList()
             } catch (e: Exception) {
+                Log.e("StoreRepo", "getStores error: $e")
                 emptyList()
             }
         }

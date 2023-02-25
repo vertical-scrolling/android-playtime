@@ -1,5 +1,6 @@
 package com.hackathon.playtime.domain.interactor.repository
 
+import android.util.Log
 import com.hackathon.playtime.data.datasource.api.GameApi
 import com.hackathon.playtime.data.datasource.remote.GameDetailsResponse
 import com.hackathon.playtime.data.datasource.remote.GameResponse
@@ -36,6 +37,7 @@ class GameRepositoryImpl(private val gameApi: GameApi) : GameRepository {
             )
             gamesResponse.body() ?: emptyList()
         } catch (e: Exception) {
+            Log.e("GameRepo", "getGames error: $e")
             emptyList()
         }
     }

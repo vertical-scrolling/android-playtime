@@ -1,5 +1,6 @@
 package com.hackathon.playtime.domain.interactor.repository
 
+import android.util.Log
 import com.hackathon.playtime.data.datasource.api.GenreApi
 import com.hackathon.playtime.data.datasource.remote.GenreResponse
 import com.hackathon.playtime.data.repository.GenreRepository
@@ -20,6 +21,7 @@ class GenreRepositoryImpl(private val genreApi: GenreApi) : GenreRepository {
                 val genresResponse = genreApi.getGenres(DEFAULT_PAGE, DEFAULT_PAGE_SIZE, DEFAULT_ORDER)
                 genresResponse.body() ?: emptyList()
             } catch (e: Exception) {
+                Log.e("GenreRepo", "getGenres error: $e")
                 emptyList()
             }
         }
