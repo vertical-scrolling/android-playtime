@@ -6,6 +6,7 @@ import com.hackathon.playtime.data.datasource.api.GenreApi
 import com.hackathon.playtime.data.datasource.api.PlatformApi
 import com.hackathon.playtime.data.datasource.api.StoreApi
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -29,9 +30,13 @@ fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         .build()
 }
 
-fun provideOkHttpClient(): OkHttpClient {
-    return OkHttpClient().newBuilder().build()
-}
+fun provideOkHttpClient() = OkHttpClient.Builder().apply {
+    if (BuildConfig.DEBUG) {
+        addInterceptor(HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        })
+    }
+}.build()
 
 fun provideGameApi(retrofit: Retrofit): GameApi = retrofit.create(GameApi::class.java)
 fun provideStoreApi(retrofit: Retrofit): StoreApi = retrofit.create(StoreApi::class.java)
